@@ -12,12 +12,12 @@ The source code and documentation is based on [Factual/clj-leveldb](https://gith
 
 **deps.edn:**
 ```clj
-io.replikativ/clj-rocksdb {:mvn/version "0.1.65"}
+io.replikativ/clj-rocksdb {:mvn/version "0.1.33"}
 ```
 
 **Leiningen:**
 ```clj
-[io.replikativ/clj-rocksdb "0.1.65"]
+[io.replikativ/clj-rocksdb "0.1.33"]
 ```
 
 To create or access a database, use `clj-rocksdb/create-db`.
