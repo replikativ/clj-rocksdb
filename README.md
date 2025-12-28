@@ -1,12 +1,23 @@
 # clj-rocksdb
-This is a self-contained wrapper around [RocksDB](https://rocksdb.org), which provides all the necessary binaries via [RocksDB Java API](https://github.com/facebook/rocksdb/tree/master/java/src/main/java/org/rocksdb).
 
-The source code and the documentation is heavily based on [Factual/clj-leveldb](https://github.com/Factual/clj-leveldb) library.
+A self-contained Clojure wrapper around [RocksDB](https://rocksdb.org), providing all necessary binaries via [RocksDB Java API](https://github.com/facebook/rocksdb/tree/master/java/src/main/java/org/rocksdb).
 
-### Basic Usage
+This is a fork of [kotyo/clj-rocksdb](https://github.com/kotyo/clj-rocksdb) with:
+- Updated RocksDB to 9.7.3
+- Added `multi-get` support for efficient batch key retrieval
 
+The source code and documentation is based on [Factual/clj-leveldb](https://github.com/Factual/clj-leveldb).
+
+## Usage
+
+**deps.edn:**
 ```clj
-[kotyo/clj-rocksdb "0.1.7-SNAPSHOT"]
+io.replikativ/clj-rocksdb {:mvn/version "0.1.65"}
+```
+
+**Leiningen:**
+```clj
+[io.replikativ/clj-rocksdb "0.1.65"]
 ```
 
 To create or access a database, use `clj-rocksdb/create-db`.
@@ -67,9 +78,8 @@ clj-rocksdb> (iterator db nil "c")
 Syncing writes to disk can be forced via `sync`, and compaction can be forced via `compact`.
 
 
-### license
+## License
 
-done by kotyo
+Originally by [kotyo](https://github.com/kotyo/clj-rocksdb).
 
-EPL-v1.0
-Distributed under the Eclipse Public License, the same as Clojure.
+EPL-v1.0 - Distributed under the Eclipse Public License, the same as Clojure.

@@ -1,0 +1,9 @@
+{:paths ["src"]
+ :deps {org.rocksdb/rocksdbjni {:mvn/version "9.7.3"}
+        byte-streams/byte-streams {:mvn/version "0.2.4"}}
+ :aliases {:dev {:extra-deps {org.clojure/clojure {:mvn/version "1.11.1"}
+                              com.taoensso/nippy {:mvn/version "3.3.0"}}
+                 :extra-paths ["test"]}
+           :build {:deps {io.github.clojure/tools.build {:mvn/version "0.10.5"}
+                          slipset/deps-deploy {:mvn/version "0.2.2"}}
+                   :ns-default build}}}
